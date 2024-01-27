@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{051BF346-AC9C-4269-8E17-4A3F23112CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toda.Api", "src\Toda.Api\Toda.Api.csproj", "{81FC9237-1E70-497D-AB63-5293D325CC7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Api", "src\Toda.Api\Todo.Api.csproj", "{81FC9237-1E70-497D-AB63-5293D325CC7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{81FC9237-1E70-497D-AB63-5293D325CC7A} = {051BF346-AC9C-4269-8E17-4A3F23112CBB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31C70BC6-90AD-4A0B-8E2E-1321DF974E4F}
 	EndGlobalSection
 EndGlobal
