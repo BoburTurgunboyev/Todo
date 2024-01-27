@@ -1,18 +1,13 @@
-﻿using Toda.Api.Enums;
+﻿using Todo.Api.Enums;
 
-namespace Toda.Api.Models
+namespace Todo.Api.Dtos
 {
-    public class Task
+    public class TaskentityDto
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string Priority { get; set; }
         public DateTime DueDate { get; set; }
+        public string Priority { get; set; }
         public State State { get; set; }
-
     }
 }
-
-
-
