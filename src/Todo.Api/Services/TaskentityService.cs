@@ -9,7 +9,10 @@ namespace Todo.Api.Services
     {
         private readonly AppDbContext _context;
 
-
+        public TaskentityService(AppDbContext context)
+        {
+            _context = context;
+        }
 
         public async ValueTask<bool> CreateTaskentityAsync(TaskentityDto taskentity)
         {
@@ -21,15 +24,18 @@ namespace Todo.Api.Services
                 DueDate = taskentity.DueDate,
                 State = taskentity.State,
             };
-            var result = await _context.Tasks.AddAsync(task);
-            return true;
+            _context.Tasks.Add(task);
+            var result = await _context.SaveChangesAsync();  
+            return result>0;
         }
 
         public async ValueTask<bool> DeleteTaskentityAsync(int id)
         {
             var task = await _context.Tasks.FirstOrDefaultAsync(x => x.Id == id);
-            var result = _context.Tasks.Remove(task);
-            return true;
+            _context.Tasks.Remove(task);
+            var result = await _context.SaveChangesAsync();
+
+            return result>0;
         }
 
         public async ValueTask<List<Taskentity>> GetAllTaskentityAsync()
@@ -40,7 +46,7 @@ namespace Todo.Api.Services
 
         public async ValueTask<Taskentity> GetByIdTaskentityAsync(int id)
         {
-            var task = await _context.Tasks.FirstOrDefaultAsync(x => x.Id == id);
+            var task = await _context.Tasks.FirstOrDefaultAsync(x => x.Id==id);
             return task;
 
         }
@@ -59,8 +65,10 @@ namespace Todo.Api.Services
             task.DueDate = taskentity.DueDate;
             task.State = taskentity.State;
 
-            var result = _context.Tasks.Update(task);
-            return true;
+
+            _context.Tasks.Update(task);
+            var result = await _context.SaveChangesAsync();
+            return result>0;
 
         }
     }
