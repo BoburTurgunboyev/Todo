@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{52320CF8-C64
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Api", "src\Todo.Api\Todo.Api.csproj", "{5941E046-761B-4944-9F87-698A9FD653AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Blazor", "src\Todo.Blazor\Todo.Blazor.csproj", "{CE0E8399-A17A-4B30-8014-0079FFF8EA61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{5941E046-761B-4944-9F87-698A9FD653AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5941E046-761B-4944-9F87-698A9FD653AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5941E046-761B-4944-9F87-698A9FD653AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0E8399-A17A-4B30-8014-0079FFF8EA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0E8399-A17A-4B30-8014-0079FFF8EA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0E8399-A17A-4B30-8014-0079FFF8EA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0E8399-A17A-4B30-8014-0079FFF8EA61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5941E046-761B-4944-9F87-698A9FD653AA} = {52320CF8-C64B-4A9D-B8C9-71299C912DD6}
+		{CE0E8399-A17A-4B30-8014-0079FFF8EA61} = {52320CF8-C64B-4A9D-B8C9-71299C912DD6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41425BBF-46FF-4536-9BA2-A930AA82B0EC}
